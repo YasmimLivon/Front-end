@@ -17,11 +17,45 @@ async function buscarhoteis() {
             card.classList.add("card");
             card.innerHTML = `<h2>Id: ${dado.id}</h2>
             <p>Nome: ${dado.nome}
-            <p>Quantidade de Estrelas: ${dado.qtdEstrelas}`;
+            <p>Quantidade de Estrelas: ${dado.qtdEstrelas}
+            <button style="margin-top:30px;" onclick="mostrarDetalhes(${dado.id})">Ver Detalhes</button>
+            <div id="detalhes_hotel_${dado.id}" style="display: none;">`;
             divCards.appendChild(card);
         });
     } catch (error){
         console.log("Erro ao buscar os dados:", error);
+    }
+}
+
+async function mostrarDetalhes(hotelId) {
+    const detalhesDiv = document.getElementById(`detalhes_hotel_${hotelId}`);
+    if(detalhesDiv.style.display === "none") {
+        detalhesDiv.style.display = "block";
+        mostrarQuartos(hotelId);
+    } else {
+        detalhesDiv.style.display = "none";
+        detalhesDiv.innerHTML = "";
+    }
+}
+
+async function mostrarQuartos(hotelId) {
+    try{
+        const response = await fetch(`${apiURLhotel}/${hotelId}`);
+        if (response.ok){
+        const hotel = await response.json();
+        console.log("quartos: ", hotel.quartos);
+        const detalhesDiv = document.getElementById(`detalhes_hotel_${hotelId}`);
+        let quartosHTML = "<h4>Quartos:</h4>";
+        hotel.quartos.forEach((quarto) => {
+            quartosHTML += `<div class="quarto-card">
+            <h5>Tipo: ${quarto.tipo}</h5>
+            <p>Preço: R$${quarto.preco}</p>
+            </div>`; 
+        });
+        detalhesDiv.innerHTML += quartosHTML;
+        }
+    } catch (error) {
+        console.error("Erro ao carregar quartos:", error);
     }
 }
 
