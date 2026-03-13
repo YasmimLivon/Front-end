@@ -1,0 +1,130 @@
+*{
+    padding: 10;
+    margin: 10;
+}
+
+
+body{
+ background-color: rgb(26, 26, 66);
+}
+h1{
+    font-family: "Fjalla One";
+    color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-weight: 500;
+    font-size: 80px;
+}
+
+#formulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#formulario label{
+    font-family: "Karla";
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#formulario input{
+    font-family: "Karla";
+    color: black;
+    font-size: 20px;
+    font-weight: 200;
+    border-radius: 20px;
+    width: 250px;
+    padding: 10px;
+    align-items: center;
+    justify-items: center;
+    height: 20px;
+}
+
+#formQuarto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#formQuarto label{
+    font-family: "Karla";
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#formQuarto input{
+    font-family: "Karla";
+    color: black;
+    font-size: 20px;
+    font-weight: 200;
+    border-radius: 20px;
+    width: 250px;
+    padding: 10px;
+    align-items: center;
+    justify-items: center;
+    height: 20px;
+}
+
+button{
+    width: 110px;
+    font-family: "Karla";
+    color: rgb(255, 255, 255);
+    background-color: rgb(53, 187, 0);
+    font-size: 20px;
+    font-weight: bolder;
+    border-color: transparent;
+    border-style: dotted;
+    border-radius: 20px;
+    height: 40px;
+}
+
+.card {
+    font-family: "Karla";
+    font-weight: 600;
+    font-size: larger;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+    border-color: black;
+    width: 500px;
+    background-color: rgb(194, 194, 194);
+    border-radius: 20px;
+}
+
+#cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
+}
+
+#cardsquarto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
+}
+
+select{
+    font-family: "Karla";
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 20px;
+    height: 50px;
+}
+
+option{
+    color: black;
+    font-family: "Karla";
+    
+}

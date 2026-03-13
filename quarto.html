@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Hotel Sunset</h1>
+
+    <form id="formQuarto">
+
+        <label for="tipo">Tipo:</label>
+        <input type="text" id="tipo">
+
+        <label for="preco">Preço:</label>
+        <input type="number" id="preco">
+
+        <select name="hotel" id="hotel" required></select>
+
+        <button id="send" type="submit">Enviar</button>
+
+    </form>
+
+    <div id ="cardsquarto"></div>
+
+    <script src="./quarto.js"></script>
+</body>
+</html>
